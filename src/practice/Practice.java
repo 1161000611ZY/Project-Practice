@@ -24,7 +24,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class Practice extends JFrame {
-	//¶¨Òå×é¼ş
+	//å®šä¹‰ç»„ä»¶
 	private JPanel pan1, pan2, pan3;
 	private JLabel labName, labPassword, labConfirm, labInstruction, labSex, labId, labNumber, labA;
 	private JTextField textField1, textField2;
@@ -34,7 +34,7 @@ public class Practice extends JFrame {
 	private JComboBox comboBox;
 	private JCheckBox checkBox;
 	
-	//¹¹Ôìº¯Êı
+	//æ„é€ å‡½æ•°
 	public Practice(String s) {
 		super(s);
 		setSize(500, 500);
@@ -42,17 +42,20 @@ public class Practice extends JFrame {
 		
 		JPanel contentPane = new JPanel(new BorderLayout());
 		setContentPane(contentPane);
-		//½çÃæµÚÒ»ĞĞ
+		//ç•Œé¢ç¬¬ä¸€è¡Œ
 		pan1 = new JPanel();
 		contentPane.add(pan1, BorderLayout.NORTH);
 		
-		labName = new JLabel("ÓÃ»§Ãû:");
+		labName = new JLabel("ç”¨æˆ·å:");
 		textField1 = new JTextField(20);
 		
-		labPassword = new JLabel("ÃÜÂë:");
+		labName = new JLabel("æ›¾ç”¨å:");
+		textField1 = new JTextField(20);
+		
+		labPassword = new JLabel("å¯†ç :");
 		passwordField = new JPasswordField(20);
 		passwordField.setEchoChar('*');
-		labConfirm = new JLabel("È·ÈÏÃÜÂë:");
+		labConfirm = new JLabel("ç¡®è®¤å¯†ç :");
 		passwordField2 = new JPasswordField(20);
 		passwordField2.setEchoChar('*');
 		
@@ -63,18 +66,18 @@ public class Practice extends JFrame {
 		pan1.add(labConfirm);
 		pan1.add(passwordField2);
 		
-		//½çÃæµÚ¶şĞĞ
+		//ç•Œé¢ç¬¬äºŒè¡Œ
 		pan2 = new JPanel();
 		contentPane.add(pan2, BorderLayout.CENTER);
 		
-		labInstruction = new JLabel("¸öÈË¼ò½é:");
+		labInstruction = new JLabel("ä¸ªäººç®€ä»‹:");
 		textArea = new JTextArea(10, 20);
-		labSex = new JLabel("ĞÔ±ğ:");
-		radioButton1 = new JRadioButton("ÄĞ");
-		radioButton2 = new JRadioButton("Å®");
-		//ÏÂÀ­Ñ¡Ïî¿ò
-		labId = new JLabel("Ö¤¼şÀàĞÍ:");
-		String[] item = { "Éí·İÖ¤", "»¤ÕÕ", "Ñ§ÉúÖ¤", "¼İÊ»Ö¤", "¾ü¹ÙÖ¤", "ÆäËû" };
+		labSex = new JLabel("æ€§åˆ«:");
+		radioButton1 = new JRadioButton("ç”·");
+		radioButton2 = new JRadioButton("å¥³");
+		//ä¸‹æ‹‰é€‰é¡¹æ¡†
+		labId = new JLabel("è¯ä»¶ç±»å‹:");
+		String[] item = { "èº«ä»½è¯", "æŠ¤ç…§", "å­¦ç”Ÿè¯", "é©¾é©¶è¯", "å†›å®˜è¯", "å…¶ä»–" };
 		comboBox = new JComboBox(item);
 		ButtonGroup btngroup = new ButtonGroup();
 		btngroup.add(radioButton1);
@@ -88,13 +91,13 @@ public class Practice extends JFrame {
 		pan2.add(labId);
 		pan2.add(comboBox);
 		
-		//½çÃæµÚÈıĞĞ
+		//ç•Œé¢ç¬¬ä¸‰è¡Œ
 		pan3 = new JPanel();
 		contentPane.add(pan3, BorderLayout.SOUTH);
-		labNumber = new JLabel("Ö¤¼şºÅÂë:");
+		labNumber = new JLabel("è¯ä»¶å·ç :");
 		textField2 = new JTextField(20);
-		labA = new JLabel("Í¬Òâ·şÎñÌõ¿î:");
-		checkBox = new JCheckBox("ÎÒÒÑ¾­¿´¹ı²¢Í¬ÒâÊ¹ÓÃĞ­Òé");
+		labA = new JLabel("åŒæ„æœåŠ¡æ¡æ¬¾:");
+		checkBox = new JCheckBox("æˆ‘å·²ç»çœ‹è¿‡å¹¶åŒæ„ä½¿ç”¨åè®®");
 		
 		pan3.add(labNumber);
 		pan3.add(textField2);
